@@ -24,6 +24,8 @@ app.use(express.json());
 console.log({ connectionString: process.env.MONGODB_CONNECTION_STRING });
 mongoose.connect(process.env.MONGODB_CONNECTION_STRING)
 
+app.get('/', (req, res) => res.send('Home Page Route'));
+
 // Admin signup
 app.post('/admin/signup', (req, res) => {
   createAdmin(req, res);
