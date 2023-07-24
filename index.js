@@ -103,6 +103,6 @@ app.get('/users/purchasedCourses', verifyTokenUser, async (req, res) => {
   return res.json({ purchasedCourses: user.purchasedCourses || [] })
 });
 
-app.listen(3000, () => {
-  console.log('Server is listening on port 3000');
-});
+// these two lines are important for Vercel deployment
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Server running on ${port}, http://localhost:${port}`));
