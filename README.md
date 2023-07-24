@@ -1,5 +1,16 @@
 ### Available Functionalities
 
+
+| Admin                     | Status |
+| ------------------------- | ------------- |
+| Signup                    | ✅            |
+| Login                     | ✅            |
+| Create a course           | ✅            |
+| Update a course           | ✅            | 
+| View all courses          | ✅            |
+| Delete a course           | ❌            |
+
+
     Admin                 | Status
 --------------------------|--------
 -   Signup                | ✅
