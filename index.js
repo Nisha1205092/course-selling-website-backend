@@ -85,7 +85,7 @@ app.post('/users/courses/:courseId', verifyTokenUser, async (req, res) => {
     return res.status(404).json({ message: 'User not found' })
   }
   const index = user.purchasedCourses.findIndex(id => id === courseId)
-  if (index === -1) {
+  if (index !== -1) {
     return res.json({ message: 'Course already purchased' })
   }
   user.purchasedCourses.push(courseId)
